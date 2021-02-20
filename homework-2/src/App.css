@@ -66,3 +66,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.italic-text {
+  font-style: italic;
+}
