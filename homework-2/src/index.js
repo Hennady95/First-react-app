@@ -7,39 +7,39 @@ import reportWebVitals from './reportWebVitals';
 const Textcomp = (props) => {
   let under = '';
   if(props.underline) {
-  under = 'underline'
+    under = 'underline'
   } else {
-  under = 'none'
+    under = 'none'
   }
   return <span style = {{fontSize: props.size, color: props.color, textDecoration: under}}>sdfkgkjdskjfhdgfdgdgdgsddskgk</span>
-  }
+}
   
-  class Textcomp2 extends React.Component {
+class Textcomp2 extends React.Component {
   
   state = {
-  value: 'X'
+    value: 'X'
   }
-  
+    
   change = () => this.state.value === 'X' ? this.setState({value: 'V'}) : this.setState({value: 'X'})
-  
+    
   render () {
-  return <div onClick = {this.change} style ={{fontSize: '25px', textAlign: 'center'}}>{this.state.value}</div>
+    return <div onClick = {this.change} style ={{fontSize: '25px', textAlign: 'center'}}>{this.state.value}</div>
   }
-  }
-  
-  class Textcomp3 extends React.Component {
-  
+}
+    
+class Textcomp3 extends React.Component {
+    
   state = {
-  ind: 0,
-  obj: [11,22,33]
+    ind: 0,
+    obj: [11,22,33]
   }
   
   changeValue = () => this.state.ind < this.state.obj.length - 1 ? this.setState({ind: this.state.ind + 1}) : this.setState({ind: 0})
-  
+    
   render () {
-  return <div onClick = {this.changeValue} style = {{fontSize: '25px', textAlign: 'center'}}>{this.state.obj[this.state.ind]}</div>
+    return <div onClick = {this.changeValue} style = {{fontSize: '25px', textAlign: 'center'}}>{this.state.obj[this.state.ind]}</div>
   }
-  }
+}
 
 ReactDOM.render(
   <React.StrictMode>
