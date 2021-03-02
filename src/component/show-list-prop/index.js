@@ -43,7 +43,7 @@ class ListBody extends React.Component{
 
     render () {
        return  this.state.showList ? (
-        <div className ={this.props.clName}> 
+        <div className ={this.props.direction }> 
         <button onClick = {this.onShowItem}>Закрыть ^</button>
             <ul>
                 {menuItem.map( item => <li><span>{item} <CountIngridients sum={this.plusCount} /></span></li>)}

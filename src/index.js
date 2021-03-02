@@ -24,10 +24,10 @@ ReactDOM.render(
     <State_modify />
     <List />
     <Play_pause />
-    <List_body clName = 'left'/>
-    <List_body clName = 'right'/>
-    <List_body clName = 'top'/>
-    <List_body clName = 'bottom'/>
+    <List_body direction  = 'left'/>
+    <List_body direction  = 'right'/>
+    <List_body direction  = 'top'/>
+    <List_body direction  = 'bottom'/>
   </React.StrictMode>,
   document.getElementById('root')
 );
