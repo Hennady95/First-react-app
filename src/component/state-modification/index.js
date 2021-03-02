@@ -6,7 +6,7 @@ class Button extends React.Component {
     }
 }
 
-class Modify_state extends React.Component {
+class ModifyState extends React.Component {
 
     state = {
         number: 0
@@ -24,4 +24,4 @@ class Modify_state extends React.Component {
     }
 }
 
-export default Modify_state;
+export default ModifyState;

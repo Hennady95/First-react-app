@@ -1,7 +1,7 @@
 import React from 'react'
 import "./style.css";
 
-class Load_animation extends React.Component {
+class LoadАnimation extends React.Component {
     
     state = {
         start: false
@@ -14,4 +14,4 @@ class Load_animation extends React.Component {
     }
 }
 
-export default Load_animation;
+export default LoadАnimation;

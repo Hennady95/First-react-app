@@ -3,7 +3,7 @@ import './style.css'
 
 const menuItem = ['Лук', 'Морковь','Укроп', 'Капуста', 'adsdsa']
 
-class Count_ingridients extends React.Component {
+class CountIngridients extends React.Component {
     state = {
         count: 0
     }
@@ -30,7 +30,7 @@ class Count_ingridients extends React.Component {
     }
 }
 
-class List_body extends React.Component{
+class ListBody extends React.Component{
     
     state = {
         showList: false,
@@ -46,7 +46,7 @@ class List_body extends React.Component{
         <div className ={this.props.clName}> 
         <button onClick = {this.onShowItem}>Закрыть ^</button>
             <ul>
-                {menuItem.map( item => <li><span>{item} <Count_ingridients sum={this.plusCount} /></span></li>)}
+                {menuItem.map( item => <li><span>{item} <CountIngridients sum={this.plusCount} /></span></li>)}
             </ul>
             <div>{this.state.finalCount}</div>
         </div>
@@ -56,4 +56,4 @@ class List_body extends React.Component{
     }
 }
 
-export default List_body;
+export default ListBody;

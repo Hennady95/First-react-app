@@ -1,10 +1,10 @@
 import './style.css'
 
-const Prop_animation = (props) => {
+const PropAnimation = (props) => {
     return props.start ? <div className='loader loader-animated'></div>
     :
     <div>Load</div>
 
 }
 
-export default Prop_animation
+export default PropAnimation
