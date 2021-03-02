@@ -10,7 +10,7 @@ class Load_animation extends React.Component {
     onStartLoad = () => this.setState({start: !this.state.start})
     
     render () {
-        return this.state.start ? <div className='loader loader-animated' onClick ={this.onStartLoad}></div>:<button onClick = {this.onStartLoad}>Load</button>
+        return <div onClick = {this.onStartLoad}>{this.state.start ? <div className='loader loader-animated'></div>:<button>Load</button>}</div>
     }
 }
 
