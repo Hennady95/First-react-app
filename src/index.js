@@ -9,7 +9,7 @@ import LoadAnimation from './component/animation'
 import PropAnimation from './component/prop-animation'
 import StateModify from './component/state-modification'
 import List from './component/array-modify'
-import PlayMause from './component/play-pause'
+import PlayPause from './component/play-pause'
 import ListBody from './component/show-list-prop'
 
 
