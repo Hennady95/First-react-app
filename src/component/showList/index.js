@@ -2,8 +2,6 @@ import React from 'react'
 
 const menuItem = ['Лук', 'Морковь','Укроп', 'Капуста', 'adsdsa']
 
-
-
 class Count_ingridients extends React.Component {
     state = {
         count: 0
@@ -46,7 +44,7 @@ class Loadpanel extends React.Component{
         <div > 
         <span>Закрыть <span onClick = {this.onShowItem}>^</span></span>
             <ul>
-                {menuItem.map( item => <li><span>{item} <Count_ingridients sum={this.plusCount} /></span></li>)}
+                {menuItem.map( item => <li key = {`${this.item}`}><span>{item} <Count_ingridients sum={this.plusCount} /></span></li>)}
             </ul>
             <div>{this.state.finalCount}</div>
         </div>
