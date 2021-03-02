@@ -9,10 +9,9 @@ class Display extends React.Component {
     onStartLoad = () => this.setState({start: !this.state.start})
     
     render () {
-        const clName = this.state.start ? 'loader loader-animated' : 'loader'
         return (
             <div>
-                <div className= {clName} ></div> 
+                <div className= {`loader ${ this.state.start ? 'loader-animated' : ''}`} ></div> 
                 <button onClick = {this.onStartLoad}>Load</button>
             </div>
         ) 
