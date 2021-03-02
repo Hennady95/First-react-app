@@ -13,7 +13,7 @@ class Modify_state extends React.Component {
     }
 
     plus =()=> this.setState({number: this.state.number + 1})
-    minus =()=> this.state.number > 0 ? this.setState({number: this.state.number - 1}) : this.state.number = 0
+    minus =()=> this.setState( this.state.number > 0 ? {number: this.state.number - 1} : {number: 0})
 
     render () {
         return <>
