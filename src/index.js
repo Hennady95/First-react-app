@@ -5,12 +5,12 @@ import App from './App';
 import Userlist from './component/user_list.js'
 import reportWebVitals from './reportWebVitals';
 import Loadpanel from "./component/showList";
-import Load_animation from './component/animation'
-import Prop_animation from './component/prop-animation'
-import State_modify from './component/state-modification'
+import LoadAnimation from './component/animation'
+import PropAnimation from './component/prop-animation'
+import StateModify from './component/state-modification'
 import List from './component/array-modify'
-import Play_pause from './component/play-pause'
-import List_body from './component/show-list-prop'
+import PlayMause from './component/play-pause'
+import ListBody from './component/show-list-prop'
 
 
 ReactDOM.render(
@@ -18,16 +18,16 @@ ReactDOM.render(
     <App />
     <Userlist />
     <Loadpanel />
-    <Load_animation />
-    <Prop_animation/>
-    <Prop_animation start/>
-    <State_modify />
+    <LoadAnimation />
+    <PropAnimation/>
+    <PropAnimation start/>
+    <StateModify />
     <List />
-    <Play_pause />
-    <List_body direction  = 'left'/>
-    <List_body direction  = 'right'/>
-    <List_body direction  = 'top'/>
-    <List_body direction  = 'bottom'/>
+    <PlayPause />
+    <ListBody direction  = 'left'/>
+    <ListBody direction  = 'right'/>
+    <ListBody direction  = 'top'/>
+    <ListBody direction  = 'bottom'/>
   </React.StrictMode>,
   document.getElementById('root')
 );
