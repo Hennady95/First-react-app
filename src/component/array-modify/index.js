@@ -8,7 +8,7 @@ class List extends React.Component {
     }
 
     oneMoreName = () => {
-        const index = Math.floor(Math.random() * 13) - 1;
+        const index = Math.floor(Math.random() * 12);
         const newList = [...this.state.people, Data[index]]
         this.setState({people: newList})
     }
