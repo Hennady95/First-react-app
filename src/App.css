@@ -28,6 +28,20 @@
   color: #61dafb;
 }
 
+.User-list-body {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+}
+
+.list-component {
+  width: 300px; 
+  margin: 5px;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
