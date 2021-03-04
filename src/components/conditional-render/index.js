@@ -10,17 +10,18 @@ class Loader extends Component {
 
     click = () => {
         setTimeout(this.sayhi,3000)
-        this.setState({loading: true})
+        this.setState({loading: true, greeting: ''})
     }
 
-    sayhi = () => this.setState({loading: false, greeting: this.state.greeting === '' ? 'Hello' : ''})
+    sayhi = () => this.setState({loading: false, greeting: 'Hello'})
 
     render() 
     {
         return <div className = 'loader-body'>
             <button className = 'start-loader' onClick = {this.click}>Say HI</button>
             <div>
-                {this.state.loading ?  <div className = 'loader'></div> : <span className = 'hello-message'>{this.state.greeting}</span>}
+                {this.state.loading && <div className = 'loader'></div> }
+               <span className = 'hello-message'>{this.state.greeting}</span>
             </div>
         </div>
     }
