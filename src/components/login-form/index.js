@@ -3,28 +3,39 @@ import '../login-form/style.css'
 
 let inputNames = [
     {
+        id: 0,
         text: 'First name',
         stateField : 'fisrtName'
     },
     {
+        id: 1,
         text: 'Last name',
         stateField : 'lastName'
     },
     {
+        id: 2,
         text: 'email',
         stateField : 'email'
     },
     {
+        id: 3,
         text: 'Nickname',
         stateField : 'nickname'
+    },
+    {
+        id: 4,
+        text: 'Test',
+        stateField: 'test'
     }
 ]
 
+const keyState = {}
+inputNames.map(item => keyState[item.stateField] = '')
+console.log(keyState);
+ 
 class Form extends Component {
 
-    state = {
-
-    }
+    state = Object.assign({},keyState)
 
     onChangeLogin = (event) => this.setState({login: event.target.value})
 
@@ -43,7 +54,7 @@ class Form extends Component {
             <p className = "field-title">Password</p>
     <input type = "text" onChange = {this.changeInputValue} value = {this.state.password} id='password'/>*/}
             {inputNames.map((item,index) => 
-                <div>
+                <div key={index}>
                     <p className = "field-title">{item.text}</p>
                     <input type = "text" onChange = {this.changeInputValue} value = {this.state.login} id={item.stateField}/>
                </div>
