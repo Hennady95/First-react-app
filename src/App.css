@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+
+.User-list-body {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+}
+
+.list-component {
+  width: 300px; 
+  margin: 5px;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.nameHomework {
+  color: blue;
+  text-align: center;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.li {
+  display: flex;
+  width: 100px;
+  margin: 5px auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  border-bottom: 1px solid green;
+}
+
+.li :hover {
+  transform: scale(1.2,1.2);
+}
+
+.li > a {
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+}
