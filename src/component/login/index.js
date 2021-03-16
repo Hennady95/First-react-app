@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
             this.setState({error: 'Enter name'})
         } else {
             this.sendData();
-            this.setState({error: ''})
+            this.setState({phone: '', fullName: '', password: '', correctPass: '', error: ''})
         }
     }
 
