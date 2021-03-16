@@ -36,19 +36,16 @@ class LoginForm extends React.Component {
     changeConfirmPass = (event) => this.setState({confirmPass: event.target.value})
 
     checkData = () => {
-        let count = 0;
-        count += /[A-Z]/.test(this.state.password) ? 1 : 0
-        count += /[a-z]/.test(this.state.password) ? 1 : 0
-        count += /\d/.test(this.state.password) ? 1 : 0
+        const correctPass = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]/g.test(this.state.password);
 
         if(this.state.password.length < 8) {
-            this.setState({error: 'short password'})
+            this.setState({error: 'Short password'})
         } else if(this.state.password !== this.state.confirmPass) {
             this.setState({error: 'Not the same value in password fields'})
-        } else if (count < 3) {
-            this.setState({error: 'Ez password'})
+        } else if (!correctPass) {
+            this.setState({error: 'Password need combinate numbers with big and small letters'})
         } else if(this.state.phone.length !== 13 || this.state.phone[0] !== '+') {
-            this.setState({error: 'Wrong phone number'})
+            this.setState({error: 'Wrong phone number, first symbol must be + and contain 12 numbers'})
         } else if(!this.state.fullName.length) {
             this.setState({error: 'Enter name'})
         } else {
