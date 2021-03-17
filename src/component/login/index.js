@@ -36,6 +36,7 @@ class LoginForm extends React.Component {
     changeConfirmPass = (event) => this.setState({confirmPass: event.target.value})
 
     checkData = () => {
+        
         const correctPass = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]/g.test(this.state.password);
 
         if(this.state.password.length < 8) {
@@ -50,7 +51,7 @@ class LoginForm extends React.Component {
             this.setState({error: 'Enter name'})
         } else {
             this.sendData();
-            this.setState({phone: '', fullName: '', password: '', correctPass: '', error: ''})
+            this.setState({phone: '', fullName: '', password: '', confirmPass: '', error: ''})
         }
     }
 
