@@ -37,7 +37,7 @@ class LoginForm extends React.Component {
 
     checkData = () => {
         
-        const correctPass = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]/g.test(this.state.password);
+        const correctPass = /[0-9a-zA-Z]/g.test(this.state.password);
 
         if(this.state.password.length < 8) {
             this.setState({error: 'Short password'})
