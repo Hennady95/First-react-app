@@ -80,6 +80,12 @@ const SignInPageContainer = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState('');
 
+  useEffect(() => {
+    console.log('Mount');
+
+    return () => console.log('Unmount');
+  })
+
   const onLogin = async () => {
     try {
       const response = await axios.post('http://localhost:3001/auth/sign-in', {
