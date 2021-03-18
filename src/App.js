@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import CustomTextInput from './components/CustomTextInput'
+import { useState } from 'react'
 
 function App() {
+
+  const [text,setText] = useState('');
+
+  const hello = (text) => setText(text)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CustomTextInput 
+        //padding = {3}
+        inputName = 'qweqwe'
+        //resetStyle
+        //type
+        onChange = {event => hello(event.target.value)}
+        value = {text}
+        //placeholder = 'aga'
+      />
     </div>
   );
 }
