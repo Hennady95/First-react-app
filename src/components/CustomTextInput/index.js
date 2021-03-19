@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './style.css'
 
 class CustomTextInput extends React.Component {
 
@@ -7,7 +8,7 @@ class CustomTextInput extends React.Component {
         let styleInput = {}
         if(this.props.resetStyle)
             styleInput = {border: 'none', backgroundColor: 'white'}
-        return <div>
+        return <div className = 'custom-input'>
             <span>{this.props.inputName}</span>
             <input 
                 onChange = {this.props.onChange} 
@@ -37,4 +38,4 @@ CustomTextInput.defaultProps = {
     placeholder: 'Tut placeholder'
 }
 
-export default CustomTextInput;
+export { CustomTextInput };
