@@ -1,6 +1,5 @@
 import './App.css';
-import CustomTextInput from './components/CustomTextInput'
-import { useState } from 'react'
+import CustomTextInput from './changedClasswork/src/components/CustomTextInput'
 
 function App() {
 

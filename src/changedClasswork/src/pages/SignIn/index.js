@@ -92,7 +92,7 @@ const SignInPageContainer = () => {
         phone: phone,
         password: password
       });
-      setUser({...response.data,user});
+      setUser({...response.data});
     } catch (err) {
       console.log(err);
       setError(err);
