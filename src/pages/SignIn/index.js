@@ -126,7 +126,6 @@ const SignInPageContainer = () => {
         <span className="text-field error-text">{error}</span>
         <button onClick={onLogin}>Sign in</button>
       </div>
-      {/*Object.keys(user).length !== 0 && <Redirect to = {ROUTES.MAIN}/>*/}
     </div>
   )
 }
