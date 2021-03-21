@@ -23,19 +23,8 @@ export const Question = (props) => {
     const [countQuestions, setCountQuestions] = useState(0);
 
     const showScore = () => {
-        let good = false;
-        for(let i = 0; i < score.length; i++) {
-            if(score[i] !== 1) {
-                good = false;
-                break
-            }
-            else 
-               good = true;
-        }
-        if(good)
-            alert('Test past')
-        else 
-            alert('Loser')
+        const good = score.reduce((rez, item) => item === 1 && rez ?  rez = true : rez = false , true);
+        return good ? alert('Test past') : alert('Loser');
     }
 
     const addAnswer = (event) => {
