@@ -67,8 +67,8 @@ const todoItems2 = [
 const Classwork = () => {
   return (
     <div className="App">
-      <CheckList title = 'First list' list = {[...todoItems]}/>
-      <CheckList title = 'Secon list' list = {[...todoItems2]}/>
+      <CheckList title = 'First list' list = {todoItems}/>
+      <CheckList title = 'Secon list' list = {todoItems2}/>
     </div>
   );
 }

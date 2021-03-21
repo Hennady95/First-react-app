@@ -30,8 +30,6 @@ Flag.propTypes = {
 
 export const CheckList = (props) => {
 
-    console.log(props.list + ' ' + props.title);
-
     const [countTask, setCountTask] = useState(0);
 
     const plus = () => setCountTask(countTask + 1);

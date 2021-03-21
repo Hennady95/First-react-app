@@ -1,14 +1,14 @@
 import './style.css'
 import { useState, useEffect } from 'react'
 
-export const RadioForQuestion = (proops) => { 
+export const RadioForQuestion = ({listAnswers,name,questionIndex,value, click }) => { 
 
     return (
         <div style = {{display: 'flex', alignItems: 'center'}}>
             <ul className= 'answers'>
-            {proops.listAnswers.map((item,i) => 
-                <li style = {{listStyleType: 'none'}}>
-                    <input type='radio' name = {proops.name} value = {`${proops.questionIndex}/${proops.value[i]}`} onClick = {proops.click}/>
+            {listAnswers.map((item,i) => 
+                <li key = {`answer${questionIndex}/${i}`} style = {{listStyleType: 'none'}}>
+                    <input type='radio' name = {name} value = {`${questionIndex}/${value[i]}`} onClick = {click}/>
                     <span>{item}</span>
                 </li>
             )}
@@ -32,7 +32,6 @@ export const Question = (props) => {
             else 
                good = true;
         }
-        console.log(score);
         if(good)
             alert('Test past')
         else 
@@ -41,7 +40,9 @@ export const Question = (props) => {
 
     const addAnswer = (event) => {
         let findValue = event.target.value.split('/');
-        score[Number(findValue[0])] = Number(findValue[1]);
+        let newArr = score;
+        newArr[Number(findValue[0])] = Number(findValue[1]);
+        setScore(newArr);
     }
 
     useEffect(() => {
@@ -52,16 +53,16 @@ export const Question = (props) => {
     
     return (<>
         {props.list.map((item, index) => 
-            <div className = 'question'>
-            <p>{item.question}</p>
-            <RadioForQuestion 
-                value = {[...item.answersValue]}
-                click = {addAnswer} 
-                name = {item.question}
-                listAnswers = {[...item.answers]}
-                questionIndex = {index}
-            />
-        </div>
+            <div className = 'question' key = {`question${index}`}>
+                <p>{item.question}</p>
+                <RadioForQuestion 
+                    value = {item.answersValue}
+                    click = {addAnswer} 
+                    name = {item.question}
+                    listAnswers = {item.answers}
+                    questionIndex = {index}
+                />
+            </div>
         )}
         <button className ='checkBtn' onClick = {showScore}>Check score</button>
     </>
