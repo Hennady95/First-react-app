@@ -1,0 +1,17 @@
+[
+    {	
+		"question": "question 1",
+		"answers": [ "Correct", "a2", "a3", "a4" ],
+		"answersValue": [ 1, 0 , 0 , 0 ]
+	} ,
+	{	
+		"question": "question 2",
+		"answers": [ "a1", "Correct", "a3", "a4"],
+		"answersValue": [ 0, 1 , 0 , 0 ]
+	} ,
+	{	
+		"question": "question 3",
+		"answers": [ "a1", "Correct", "a3", "a4"],
+		"answersValue": [ 0, 1 , 0 , 0 ]
+	}
+]
