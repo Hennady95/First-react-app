@@ -24,7 +24,7 @@ class UsersPage extends Component {
     return (
       <div className="page">
         <div className="page-users">
-          {this.state.users.map((item, i) => {
+          {this.state.users.map((item) => {
             return (
               <Link to = {`/users/${item.index + 1}`} key ={item._id}>
                 <Card

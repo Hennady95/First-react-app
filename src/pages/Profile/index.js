@@ -1,8 +1,6 @@
-import { Component,useState , useEffect} from 'react'
+import React,{ Component,useState , useEffect} from 'react';
 
 import axios from 'axios';
-
-import { Card } from '../../components';
 
 class Profile extends Component {
 
@@ -11,8 +9,8 @@ class Profile extends Component {
   }
 
   componentDidMount = async () => {
-      const indexOfUsers = this.props.match.params.index - 1;
-      const response = await axios.get(`http://localhost:3001/users/${indexOfUsers}`)
+      const indexOfUsers = this.props .match.params.index - 1;
+      const response = await axios.get(`http://localhost:3001/users/${indexOfUsers}`)/*${indexOfUsers}*/
       this.setState({profileData: response.data })
   }
 
@@ -31,9 +29,9 @@ class Profile extends Component {
 
 //let intervalId = null;
 
-export const Profile1 = (indexData) => {
+export const Profile1 = (/*indexData*/) => {
     
-    const [profData, setProfData] = useState({});
+    //const [profData, setProfData] = useState({});
 
     const [seconds, setTime] = useState(0);
 
@@ -41,7 +39,7 @@ export const Profile1 = (indexData) => {
 
     useEffect(() => {
 
-    },[profData])
+    },[/*profData */])
 
     /*useEffect(() => {
         const intervalId = setInterval(() => setTime((seconds) => seconds + 1), 1000)

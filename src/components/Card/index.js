@@ -8,7 +8,7 @@ const Card = ({
   name,
   small,
   id,
-  showId
+  showId,
 }) => {
 
   const getClassNames = () => {
@@ -16,11 +16,10 @@ const Card = ({
       card: `card ${small && 'card-small'}`,
       cardImage: `card-image ${small && 'card-image-small'}`,
       cardContent: `card-content ${small && 'card-content-small'}`,
-    }
-  }
-  
+    };
+  };
   // Пример мемоизации переменной в функциональном компоненте
-  const classNames = getClassNames()
+  const classNames = getClassNames();
 
   return (
     <div className={classNames.card}>
@@ -35,8 +34,8 @@ const Card = ({
         {showId && <h5>{id}</h5>}
       </div>
     </div>
-  )
-}
+  );
+};
 
 /**
  * Библиотека propTypes используется для описания типов пропсов.
@@ -48,7 +47,9 @@ Card.propTypes = {
     first: PropTypes.string,
     last: PropTypes.string,
   }),
-  small: PropTypes.bool
+  small: PropTypes.bool,
+  id: PropTypes.number,
+  showId: PropTypes.number,
 };
 
 

@@ -1,10 +1,11 @@
-import React, { Component, useState, useEffect} from 'react';
+import React, { /*Component,*/ useState, useEffect} from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom'
+//import { Redirect } from 'react-router-dom'
 import {ROUTES} from '../../const'
 
 import './style.css';
-
+import { Route } from 'react-router';
+/*
 class SignInPageContainer1 extends Component {
 
   state = {
@@ -70,9 +71,9 @@ class SignInPageContainer1 extends Component {
       </div>
     )
   }
-}
+}*/
 
-const SignInPageContainer = () => {
+const SignInPageContainer = (props) => {
 
 
   const [phone, setPhone] = useState('');
@@ -93,6 +94,8 @@ const SignInPageContainer = () => {
         password: password
       });
       setUser({...response.data});
+      props.setUserData(response.data);
+      props.history.push(ROUTES.MAIN);
     } catch (err) {
       console.log(err);
       setError(err);
