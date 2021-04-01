@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import PropTypes from 'prop-types';
 import '../checklist/style.css'
 
@@ -18,7 +18,7 @@ const Flag = (props) => {
 
     return <>
         <input type = 'checkbox' onChange = {onCangeFlag}/>
-        <input type = 'text' value = {props.text}/>
+        <input type = 'text' defaultValue = {props.text}/>
     </>
 }
 
