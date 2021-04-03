@@ -1,10 +1,40 @@
 .App {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto 50px auto;
+  width: 500px;
+  justify-content: space-around;
   text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.lightTheme {
+  background-color: white;
+  color:black;
+}
+
+.darkTheme {
+  background-color: black;
+  color: white;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color:black;
+}
+
+.orange {
+  background-color: orange;
+  color:black;
 }
 
 @media (prefers-reduced-motion: no-preference) {
