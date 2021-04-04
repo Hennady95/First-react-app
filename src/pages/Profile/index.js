@@ -4,6 +4,8 @@ import axios from 'axios';
 
 import { useSelector, useDispatch } from 'react-redux'
 
+import { useParams } from 'react-router-dom'
+
 class Profile extends Component {
   state = {
     profileData: null,
@@ -42,7 +44,9 @@ export const Profile1 = (props) => {
     const profData = useSelector((state) => state.profileState.profData);
 
     const seconds = useSelector((state) => state.profileState.seconds)
-    console.log(seconds);
+    
+    const { index } = useParams();
+
     const upTime = useCallback(()=> {
       
       const changeTime = {
@@ -62,8 +66,7 @@ export const Profile1 = (props) => {
 
     useEffect(() => {
       async function fetchData() {
-      
-        const indexOfUsers = props.match.params.index - 1;
+        const indexOfUsers = index - 1;
         const response = await axios.get(`http://localhost:3001/users/${indexOfUsers}`)
   
         const chengeProfile = {
@@ -75,7 +78,7 @@ export const Profile1 = (props) => {
       
       }
       fetchData();
-    },[dispatch,props.match.params.index])
+    },[dispatch,index])
 
     /*
     useEffect(() => {
