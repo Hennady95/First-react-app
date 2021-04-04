@@ -46,7 +46,7 @@ export const Profile1 = (props) => {
     const upTime = useCallback(()=> {
       
       const changeTime = {
-        type: "CHENGE_TIME",
+        type: "CHANGE_TIME",
       }
 
       dispatch(changeTime)
@@ -67,7 +67,7 @@ export const Profile1 = (props) => {
         const response = await axios.get(`http://localhost:3001/users/${indexOfUsers}`)
   
         const chengeProfile = {
-          type: "CHENGE_PROFILE",
+          type: "CHANGE_PROFILE",
           payload: response.data,
         }
   

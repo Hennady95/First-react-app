@@ -57,7 +57,7 @@ export const reducer = (state = initioalState, action) => {
         }
     }
 
-    if(action.type === "CHENGE_PROFILE") {
+    if(action.type === "CHANGE_PROFILE") {
         return {
             ...state,
             profileState: {
@@ -67,7 +67,7 @@ export const reducer = (state = initioalState, action) => {
         }
     }
 
-    if(action.type === "CHENGE_TIME") {
+    if(action.type === "CHANGE_TIME") {
         return {
             ...state,
             profileState: {
