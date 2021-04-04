@@ -174,7 +174,7 @@ const SignInPageContainer = () => {
         value={password}
       />
       <div>
-        {user !== null && (
+        {user && (
           <span>{user.name.first} {user.name.last}</span>
         )}
       </div>
