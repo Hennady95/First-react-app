@@ -1,8 +1,7 @@
-import './App.css';
-import CustomTextInput from './changedClasswork/src/components/CustomTextInput'
-import { useState } from 'react'
+import { CustomTextInput } from '../../components'
+import React,{ useState } from 'react'
 
-function App() {
+function App1() {
 
   const [text,setText] = useState('');
 
@@ -23,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export  { App1 };
