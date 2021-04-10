@@ -8,7 +8,7 @@ import {Provider} from 'react-redux'
 import logger from 'redux-logger'
 import { createStore , applyMiddleware} from 'redux';
 import { reducer } from './reducer' 
-
+//
 ReactDOM.render(
   <React.StrictMode>
     <Provider store = {createStore(reducer,applyMiddleware(logger))}>
